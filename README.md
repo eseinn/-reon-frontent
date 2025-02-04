@@ -1,4 +1,5 @@
 This is a web small app that utilizes the v2 of the PokéApi (https://pokeapi.co/)
+
 Project Name: Pokemon Web App
 
 Description:
