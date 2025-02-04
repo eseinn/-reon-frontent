@@ -4,7 +4,6 @@ import Link from 'next/link';
 
 const Page = async () => {
   const pokemons = await fetchPokemons(20);
-  console.log(pokemons);
   return (
     <Wrapper>
       <h1 className='font-bold text-xl my-10'>Pokemons</h1>

@@ -5,7 +5,6 @@ const Page = async (props: { params: Promise<{ id: string }> }) => {
   const { id } = await props.params;
 
   const pokemon = await fetchPokemon(id);
-  console.log(pokemon);
   return (
     <Wrapper>
       <h1 className='font-bold text-xl my-10 capitalize'>Pokemon details</h1>
