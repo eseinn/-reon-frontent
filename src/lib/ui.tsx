@@ -1,12 +1,32 @@
-import type { PropsWithChildren } from 'react';
-
+import cn from 'classnames';
+import type { ButtonHTMLAttributes, PropsWithChildren } from 'react';
 export const Wrapper = ({ children }: PropsWithChildren) => (
   <div className='flex flex-col items-center justify-center my-4'>
     {children}
   </div>
 );
-export const StyledButton = ({ children }: PropsWithChildren) => (
-  <button className='w-full border-blue-600 text-center border p-2 hover:bg-blue-400 bg-blue-500 font-bold text-white transition-all rounded-md'>
+
+export const H1 = ({ children }: PropsWithChildren) => (
+  <h1 className='font-bold text-xl my-10 capitalize'>{children}</h1>
+);
+type StyledButtonProps = PropsWithChildren<
+  { noColor?: boolean } & ButtonHTMLAttributes<HTMLButtonElement>
+>;
+
+export const StyledButton = ({
+  children,
+  noColor,
+  ...props
+}: StyledButtonProps) => (
+  <button
+    className={cn(
+      'w-full text-center border p-2 font-bold transition-all rounded-md',
+      noColor
+        ? 'hover:bg-gray-400 bg-gray-100'
+        : 'bg-blue-500 border-blue-600 text-white  hover:bg-blue-400'
+    )}
+    {...props}
+  >
     {children}
   </button>
 );

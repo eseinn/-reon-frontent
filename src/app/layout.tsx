@@ -18,9 +18,12 @@ export default function RootLayout({
     <html lang='en'>
       <body className={`antialiased`}>
         <ReactQueryProvider>
-          <div className='m-4 absolute right-0'>
+          <div className='m-4 absolute flex gap-2 right-0'>
             <Link href='/'>
-              <StyledButton>Home</StyledButton>
+              <StyledButton noColor>Home</StyledButton>
+            </Link>
+            <Link href='/favorites'>
+              <StyledButton noColor>Favorites</StyledButton>
             </Link>
           </div>
           {children}

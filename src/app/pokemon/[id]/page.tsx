@@ -1,13 +1,13 @@
 import { fetchPokemon } from '@/lib/data';
-import { AttributeItem, Wrapper } from '@/lib/ui';
+import { AttributeItem, H1, Wrapper } from '@/lib/ui';
 
 const Page = async (props: { params: Promise<{ id: string }> }) => {
   const { id } = await props.params;
-
   const pokemon = await fetchPokemon(id);
+
   return (
     <Wrapper>
-      <h1 className='font-bold text-xl my-10 capitalize'>Pokemon details</h1>
+      <H1>Pokemon details</H1>
       <div className='my-4'>
         You have chosen: <span className=' font-semibold capitalize'>{id}</span>
       </div>
