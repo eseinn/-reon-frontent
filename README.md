@@ -1,8 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a web small app that utilizes the v2 of the PokéApi (https://pokeapi.co/)
+Project Name: Pokemon Web App
 
-## Getting Started
+Description:
 
-First, run the development server:
+- At the pokemon page (/pokemon) you can see a list of the first 20 pokemons and click on each one for details.
+- On the detailed pokemon page (/pokemon/:name) you can see details about each pokemon and add it to your favorites.
+- The favorite page (/favorites) displays a list of your favorite pokemons.
+
+Tech Stack:
+
+The tech stack for this project is based on the latest version of NextJs (currently 15.1.6) and utlizes the App Router set up.
+Additional libraries include
+
+- Tailwind CSS for styling
+- React-query for data fetching (although it wasn´t actually used).
+- classnames for manipulating tailwind styles
+
+Setup:
+
+Clone the repository to your local machine by running
+
+git clone https://github.com/eseinn/-reon-frontent.git
+
+To install dependencies you can run:
+
+```bash
+npm run install
+# or
+yarn i
+# or
+pnpm i
+```
+
+To run locally on a development server use the following commands:
 
 ```bash
 npm run dev
@@ -10,27 +40,16 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+and then open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+To build the project you can similarly run
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run build
+# or
+yarn build
+# or
+pnpm build
+```
