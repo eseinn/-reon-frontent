@@ -21,7 +21,9 @@ Setup:
 
 Clone the repository to your local machine by running
 
+```bash
 git clone https://github.com/eseinn/-reon-frontent.git
+```
 
 To install dependencies you can run:
 
