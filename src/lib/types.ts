@@ -7,6 +7,9 @@ export type PokemonListT = {
     >
 };
 
-type PokemonT = {
-
+export type PokemonT = {
+    height: number;
+    base_experience: number
+    name: string;
+    abilities: Array<{ ability: { name: string, url: string }, is_hidden: boolean, slot: number }>
 }

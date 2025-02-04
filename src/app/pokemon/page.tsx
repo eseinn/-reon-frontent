@@ -1,23 +1,27 @@
 import { fetchPokemons } from '@/lib/data';
-import { Button } from '@/lib/ui';
+import { StyledButton, Wrapper } from '@/lib/ui';
 import Link from 'next/link';
 
 const Page = async () => {
-  const pokemons = await fetchPokemons(10);
+  const pokemons = await fetchPokemons(20);
   console.log(pokemons);
   return (
-    <div className='flex flex-col items-center justify-center'>
+    <Wrapper>
       <h1 className='font-bold text-xl my-10'>Pokemons</h1>
       <div className='flex flex-col gap-4'>
         {pokemons.results.map((pokemon) => {
           return (
-            <Button key={`${pokemon.url}`}>
-              <Link href={`pokemon/${pokemon.name}`}>{pokemon.name}</Link>
-            </Button>
+            <Link
+              href={`pokemon/${pokemon.name}`}
+              className='capitalize w-full'
+              key={`${pokemon.url}`}
+            >
+              <StyledButton>{pokemon.name} </StyledButton>
+            </Link>
           );
         })}
       </div>
-    </div>
+    </Wrapper>
   );
 };
 export default Page;
